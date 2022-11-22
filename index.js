@@ -3,41 +3,51 @@ const cats = ["Milo", "Otis", "Garfield"];
 // Write your solution here!
 
 // This function should append a cat to the end of the array, destructively.
-destructivelyAppendCat(name) {
+function destructivelyAppendCat(name) {
+    cats.push(name);
+  }
+destructivelyAppendCat("Timi");
 
-}
-
+console.log(cats);
 // this function should prepend a cat to the beginning of the cats array, destructively.
-destructivelyPrependCat(name) {
-
+function destructivelyPrependCat(name) {
+    cats.unshift(name);
 }
+destructivelyPrependCat("Meow");
+console.log(cats);
 
 // this function should remove the last cat from the cats array, destructively.
-destructivelyRemoveLastCat() {
-
+function destructivelyRemoveLastCat() {
+    cats.pop();
 }
 
-// this function should remove the first cat from the cats array, destructively.
-destructivelyRemoveFirstCat() {
+destructivelyRemoveLastCat();
 
+console.log(cats);
+
+// this function should remove the first cat from the cats array, destructively.
+function destructivelyRemoveFirstCat() {
+    cats.shift();
 }
 
 // this function should append a cat to the cats array and return a new array, leaving the cats array unchanged
-appendCat(name) {
-
+function appendCat(name) {
+    return [...cats, name];
 }
 
 // this function should prepend a cat to the cats array and return a new array, leaving the cats array unchanged
-prependCat(name) {
-
+function prependCat(name) {
+    return [name, ...cats];
 }
 
 // this function should remove the last cat in the cats array and return a new array, leaving the cats array unchanged
-removeLastCat() {
-
+function removeLastCat() {
+    return cats.slice(-1);
 }
 
 // this function should remove the first cat from the cats array and return a new array, leaving the cats array unchanged
-removeFirstCat() {
-
+function removeFirstCat() {
+    return cats.slice(0,1);
 }
+
+console.log(cats);
